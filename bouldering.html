@@ -33,11 +33,11 @@
             <li class="nav-item">
               <a class="nav-link" href="WilliamLi_Resume.pdf" target="_blank">Resume</a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="potus-analysis.html">POTUS-speech-analysis<span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="potus-analysis.html">POTUS-speech-analysis</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="bouldering.html">Bouldering</a>
+                <a class="nav-link active" href="bouldering.html">Bouldering<span class="sr-only">(current)</span></a>
               </li>
           </ul>
         </div>
@@ -72,57 +72,14 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading"> About the<span class="text-muted"> project</span></h2>
             <p class="lead"> 
-                This semester, I used a few text analysis methods on the POTUS Speech Corpus for a final project
-                in DS 5559 Exploratory Text Analytics. Everything was done in Jupyter Notebook; we created Topic Models
-                with <a href="https://radimrehurek.com/gensim/" target="blank"> gensim</a> and wrote Sentiment Analyses using <a href="https://github.com/cjhutto/vaderSentiment" target="_blank">vaderSentiment</a>.
-                
-                <br><br>The motivation behind this project was to discover some of
-                the trending national concerns during each president's term. Ideally, using this analysis we should
-                be able to map out a history of our nation with respect to the globe.
-
-                <br><br> You can find view code for the project on github <a href="https://github.com/wzl7zb/POTUS-speech-analysis" target="_blank"> here</a>.
+              I started bouldering about 1.5 years ago during my second year at UVA; I currently climb
+              around V5/6C. Here is where I'll be posting any future problems that I think are cool/interesting.
             </p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="img/text-mining.png" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
           </div>
         </div>
 
-        <hr class="featurette-divider">
-          <div class="row featurette">
-              <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">Topic<span class="text-muted"> Modeling</span></h2>
-                <p class="lead">
-                  The process for bringing the corpus from F0 to F4 is quite lengthy. The corpus comes in a zipped 
-                  directory of subdirectories, one for each president. Each subdirectory contains a a few text files,
-                   one for each speech that president made during his term. The format of each speech was in XML format, 
-                   which made it quite easy to parse. Once all of this data was propery parsed into a pandas DataFrame,
-                   we cleaned up the text for any bad characters, and tokenized so we could create bigram and trigram models 
-                  for our data. <br><br>
-                  Then we remove any stopwords, lemmatize, and form a dictionary of our vocabulary. Once this is done, we feed
-                  our F4 data into the gensim topic model wrapper. We did this for every single president, and in the end 
-                  we had a list of topics available to us in chronological order. This data is visualized in the timeline below:
-                </p>
-              </div>
-            </div>
-            <img class="featurette-image img-fluid mx-auto" src="img/timeline.PNG" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          <hr class="featurette-divider">
-
-          <div class="row featurette">
-              <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">Sentiment<span class="text-muted"> Analysis</span></h2>
-                <p class="lead">
-                  The process for feeding our data into VADER's Sentiment Analysis model is much simpler. Since the model operates
-                  best on the sentence level, we simply import all of our corpus data into an appropriate DataFrame, and we concatenate
-                  every president's speeches together, and split each combined speech into a list of sentences. The proportions of each
-                  president's speeches which were recorded as "positive" (most sentences spoken were neutral) by VADER is listed below:
-                </p>
-              </div>
-            </div>
-            <img class="featurette-image img-fluid mx-auto" src="img/barchart.PNG" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-          <hr class="featurette-divider">
+      <hr class="featurette-divider">
         <!-- /END THE FEATURETTES -->
 
       </div><!-- /.container -->
